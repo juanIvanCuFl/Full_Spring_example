@@ -1,0 +1,10 @@
+spring.application.name=servicio-customers
+#server.port=${PORT:0}
+#eureka.instance.instance-id=${spring.application.name}:${spring.application.instance_id:${random.value}}
+server.port=8001
+server.servlet.context-path=/customers
+
+#Configuracion opcional cuando los servicios estan en la misma maquina
+eureka.client.service-url.defaultZone=${eureka.path}
+
+

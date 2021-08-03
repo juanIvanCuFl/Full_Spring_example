@@ -1,0 +1,13 @@
+package com.springboot.gft.customerse;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ServicioCustomerseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServicioCustomerseApplication.class, args);
+	}
+
+}

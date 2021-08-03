@@ -1,0 +1,43 @@
+package com.springboot.gft.accountse.models.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.springboot.gft.accountse.clients.AccountClientRest;
+import com.springboot.gft.accountse.facade.dto.DtoAccount;
+
+@Service("serviceFeign")
+public class AccountService implements IAccountService{
+
+	@Autowired
+	private AccountClientRest clienteFeing;
+	
+	@Override
+	public List<DtoAccount> listar() {
+		return clienteFeing.listar();
+	}
+
+	@Override
+	public DtoAccount crear(DtoAccount dtoAccount) {
+		return clienteFeing.crear(dtoAccount);
+	}
+
+	@Override
+	public ResponseEntity detalle(Long id, String accountNumber) {
+		return clienteFeing.detalle(id, accountNumber);
+	}
+
+	@Override
+	public ResponseEntity eliminar(Long id, String accountNumber) {
+		return clienteFeing.eliminar(id, accountNumber);
+	}
+
+	@Override
+	public DtoAccount editar(DtoAccount dtoAccount, Long id, String accountNumber) {
+		return clienteFeing.editar(dtoAccount, id, accountNumber);
+	}
+
+}

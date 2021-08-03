@@ -1,0 +1,7 @@
+spring.application.name=servicio-accounts
+#server.port=${PORT:0}
+server.port=8002
+server.servlet.context-path=/accounts
+
+#Configuracion opcional cuando los servicios estan en la misma maquina
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/

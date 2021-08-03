@@ -1,0 +1,5 @@
+package com.springboot.gft.customerse.models.service;
+
+public interface ICustomersService {
+
+}

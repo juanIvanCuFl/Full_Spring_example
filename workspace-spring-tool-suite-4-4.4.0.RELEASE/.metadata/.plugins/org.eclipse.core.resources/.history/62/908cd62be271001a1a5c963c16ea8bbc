@@ -1,0 +1,22 @@
+spring.application.name=servicio-zuul-server
+server.port=8090
+
+
+eureka.client.service-url.defaultZone=http://servicio-eureka-server:8761/eureka/
+
+zuul.routes.accountse.service-id=servicio-accountse
+zuul.routes.accountse.path=/api-public/accounts/**
+
+zuul.routes.customers.service-id=servicio-customers
+zuul.routes.customers.path=/api/customers/**
+
+
+zuul.routes.accounts.service-id=servicio-accounts
+zuul.routes.accounts.path=/api/accounts/**
+
+
+zuul.routes.customerse.service-id=servicio-customerse
+zuul.routes.customerse.path=/api-public/security/**
+
+#Se requiere quitar de las cabceras las cokies
+zuul.routes.security.sensitive-headers=Cookie,Set-Cookie

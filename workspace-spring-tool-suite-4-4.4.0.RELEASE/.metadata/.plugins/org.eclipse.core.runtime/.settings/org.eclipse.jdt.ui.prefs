@@ -1,0 +1,12 @@
+content_assist_insert_completion=false
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.springboot.gft.clientes.models.entity.Cliente"><rhs name\="com.springboot.gft.clientes.models.entity.Cliente"/></lhs><lhs name\="com.springboot.gft.clientes.models.entity.Account_pk"><rhs name\="com.springboot.gft.clientes.models.entity.Account_pk"/></lhs><lhs name\="com.springboot.gft.accounts.models.entity.Account"><rhs name\="com.springboot.gft.accounts.models.entity.Account"/></lhs><lhs name\="org.springframework.http.HttpEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs><lhs name\="org.springframework.http.ResponseEntity"><rhs name\="org.springframework.http.ResponseEntity"/></lhs></history>
+content_assist_number_of_computers=16
+content_assist_proposals_background=252,252,252
+content_assist_proposals_foreground=35,38,39
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.ui.formatterprofiles.version=17
+sourceHoverBackgroundColor=49,54,59
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

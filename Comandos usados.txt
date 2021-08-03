@@ -1,0 +1,56 @@
+#Cambiar permisos de  mvnw
+sudo chmod 777 mvnw
+#Compilar y enpaquetar jar
+./mvnw clean package -DskipTests
+
+#Creacion de imagenes docker
+sudo docker build -t eureka-server:v1 .
+sudo docker build -t zuul-server:v1 .
+sudo docker build -t config-server:v1 .
+sudo docker build -t servicio-accounts:v1 .
+sudo docker build -t servicio-customerse:v1 .
+sudo docker build -t servicio-accountse:v1 .
+sudo docker build -t servicio-customers:v1 .
+
+#Creacion de red
+docker network create evaluacionGft
+
+#Creacion de contenedores
+docker container create -t -p 8888:8888 --network evaluacionGft --name config-server-gft config-server:v1
+docker container create -t -p 8090:8090 --network evaluacionGft --name zuul-server zuul-server:v1
+docker container create -t -p 8761:8761 --network evaluacionGft --name eureka-server eureka-server:v1
+
+docker container create -t -P --network evaluacionGft --name servicio-accounts servicio-accounts:v1
+docker container create -t -P --network evaluacionGft --name servicio-customerse servicio-customerse:v1
+docker container create -t -P --network evaluacionGft --name servicio-accountse servicio-accountse:v1
+docker container create -t -P --network evaluacionGft --name servicio-customers servicio-customers:v1
+
+#Listado de contenedores detenidos
+docker container ls -f 'status=exited' -f 'status=dead' -f 'status=created' 
+
+#Listado de contenedores activos
+
+#Iniciar contenedores
+docker start  eureka-server       
+docker start  config-server-gft 
+docker start  servicio-customers  
+docker start  servicio-accountse    
+docker start  servicio-customerse
+docker start  servicio-accounts   
+docker start  zuul-server  
+     
+
+
+docker stop servicio-customers
+docker stop servicio-accountse
+docker stop servicio-customerse
+docker stop servicio-accounts
+docker stop config-server-gft
+docker stop eureka-server
+docker stop zuul-server
+
+#URL de swagger
+http://localhost:8090/api/customers/customers/swagger-ui.html
+http://localhost:8090/api/accounts/accounts/swagger-ui.html
+http://localhost:8090/api-public/customers/customerse/swagger-ui.html
+http://localhost:8090/api-public/accounts/accountse/swagger-ui.html

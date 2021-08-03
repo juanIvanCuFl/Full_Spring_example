@@ -1,0 +1,33 @@
+package com.springboot.gft.clientes.models.entity;
+
+import javax.persistence.Column;
+
+public class Account_pk {
+
+	private Long id_customer;
+	@Column(name = "account_number")
+	private String accountNumber;
+	
+	
+	
+	
+	public Account_pk(Long id_customer, String accountNumber) {
+		super();
+		this.id_customer = id_customer;
+		this.accountNumber = accountNumber;
+	}
+	public Long getId_customer() {
+		return id_customer;
+	}
+	public void setId_customer(Long id_customer) {
+		this.id_customer = id_customer;
+	}
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	
+	
+}

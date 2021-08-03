@@ -1,0 +1,46 @@
+package com.springboot.gft.customerse.models.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.springboot.gft.customerse.clients.CustomersClientRest;
+import com.springboot.gft.customerse.facade.dto.Customer;
+
+@Service
+@Qualifier("service-feign")
+public class CustomersService implements ICustomersService{
+
+	@Autowired
+	private CustomersClientRest clientRest;
+	
+	
+	@Override
+	public List<Customer> listar() {
+		return clientRest.listar();
+	}
+
+	@Override
+	public ResponseEntity detalle(Long id) {
+		return clientRest.detalle(id);
+	}
+
+	@Override
+	public Customer crear(Customer cliente) {
+		return clientRest.crear(cliente);
+	}
+
+	@Override
+	public ResponseEntity eliminar(Long id) {
+		return clientRest.eliminar(id);
+	}
+
+	@Override
+	public Customer editar(Customer customer, Long id) {
+		return clientRest.editar(customer, id);
+	}
+
+}

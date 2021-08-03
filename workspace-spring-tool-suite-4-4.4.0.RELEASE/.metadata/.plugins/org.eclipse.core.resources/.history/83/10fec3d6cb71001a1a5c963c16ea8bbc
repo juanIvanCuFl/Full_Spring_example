@@ -1,0 +1,5 @@
+package com.springboot.gft.accountse.facade.dto;
+
+public class DtoAccount {
+
+}

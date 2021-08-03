@@ -1,0 +1,4 @@
+spring.application.name=servicio-customerse
+#server.port=${PORT:0}
+server.port=8004
+server.servlet.context-path=/customerse

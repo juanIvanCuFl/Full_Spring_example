@@ -1,0 +1,13 @@
+1585456110058	Rename type 'CLienteController'
+1585456956555	Rename field 'birthDate'
+1585458361059	Rename type 'Cliente'
+1585458388664	Rename type 'Customers'
+1585458469180	Rename type 'ClientesDao'
+1585458486931	Rename type 'IClienteService'
+1585458513183	Rename type 'ClienteService'
+1585458522355	Rename field 'clientesDao'
+1585458571617	Rename type 'ClienteController'
+1585458836369	Copy compilation unit
+1585460495905	Copy compilation units
+1585461446489	Copy file
+1585492635742	Infer generic type arguments

@@ -1,0 +1,204 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EvaluacionGFT",
+		"_postman_id": "bd97e063-e4a8-52de-967d-18e7b46dccf8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"url": "localhost:8090/api-public/customers/customerse/v1/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"ADRIANA ISABEL\",\n        \"app\": \"DE LA CRUZ FLORES\",\n        \"birthdate\": \"2020-03-30\",\n        \"sex\": \"F\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all cuentas",
+			"request": {
+				"url": "localhost:8090/api-public/accounts/accountse/v1/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"ADRIANA ISABEL\",\n        \"app\": \"DE LA CRUZ FLORES\",\n        \"birthdate\": \"2020-03-30\",\n        \"sex\": \"F\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get ID",
+			"request": {
+				"url": "localhost:8090/api-public/customers/customerse/v1/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"JUAN IVAN\",\n    \"app\": \"DE LA CRUZ FLORES\",\n    \"birthdate\": \"2020-03-30\",\n    \"sex\": \"M\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get ID cuentas",
+			"request": {
+				"url": "localhost:8090/api-public/accounts/accountse/v1/00235689741/customers/12568947",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"JUAN IVAN\",\n    \"app\": \"DE LA CRUZ FLORES\",\n    \"birthdate\": \"2020-03-30\",\n    \"sex\": \"M\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"url": "localhost:8090/api-public/customers/customerse/v1/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Juan Ivan\",\n    \"app\": \"De La Cruz Flores\",\n    \"birthdate\": \"2020-03-30\",\n    \"sex\": \"M\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add cuenta",
+			"request": {
+				"url": "localhost:8090/api-public/accounts/accountse/v1/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"idCustomer\": 1256894,\n        \"accountNumber\": \"00235689741\",\n        \"saldo\": 0,\n        \"productType\": \"Cheques\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"url": "localhost:8090/api-public/customers/customerse/v1/100",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Juan Ivan\",\n    \"app\": \"De La Cruz Flores\",\n    \"birthdate\": \"2020-03-30\",\n    \"sex\": \"M\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update cuenta",
+			"request": {
+				"url": "localhost:8090/api-public/accounts/accountse/v1/00235689741/customers/12568947",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idCustomer\": 1256894,\n    \"accountNumber\": \"00235689741\",\n    \"saldo\": 0,\n    \"productType\": \"Cheques\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"url": "localhost:8090/api-public/customers/customerse/v1/3",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete cuenta",
+			"request": {
+				"url": "localhost:8090/api-public/accounts/accountse/v1/00235689741/customers/12568947",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Servidor de configuraciones",
+			"request": {
+				"url": "localhost:8888/servicio-accounts/dev",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

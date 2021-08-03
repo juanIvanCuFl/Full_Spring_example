@@ -1,0 +1,5 @@
+package com.springboot.gft.accounts.facade.error;
+
+public class GeneralError {
+
+}

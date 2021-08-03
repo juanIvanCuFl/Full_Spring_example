@@ -1,0 +1,7 @@
+spring.application.name=servicio-accoutse
+#server.port=${PORT:0}
+server.port=8003
+server.servlet.context-path=/accountse
+
+#Configuracion opcional cuando los servicios estan en la misma maquina
+eureka.client.service-url.defaultZone=http://servicio-eureka-server:8761/eureka/

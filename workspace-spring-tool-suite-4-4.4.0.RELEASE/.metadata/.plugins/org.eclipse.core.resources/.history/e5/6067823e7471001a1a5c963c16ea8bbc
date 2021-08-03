@@ -1,0 +1,5 @@
+package com.springboot.gft.clientes.models.entity;
+
+public class Cliente {
+
+}

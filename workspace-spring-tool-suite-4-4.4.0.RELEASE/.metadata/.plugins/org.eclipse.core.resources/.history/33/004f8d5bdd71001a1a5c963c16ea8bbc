@@ -1,0 +1,4 @@
+spring.application.name=servicio-accoutse
+#server.port=${PORT:0}
+server.port=8003
+server.servlet.context-path=/accountse

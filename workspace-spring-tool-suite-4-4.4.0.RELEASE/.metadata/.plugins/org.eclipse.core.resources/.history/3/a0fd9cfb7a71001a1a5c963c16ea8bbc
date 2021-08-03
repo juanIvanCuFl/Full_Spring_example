@@ -1,0 +1,9 @@
+package com.springboot.gft.clientes.models.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.springboot.gft.clientes.models.entity.Cliente;
+
+public interface ClientesDao extends CrudRepository<Cliente, Long>{
+
+}

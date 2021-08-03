@@ -1,0 +1,51 @@
+package com.springboot.gft.customerse.models.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.springboot.gft.customerse.clients.CustomersClientRest;
+import com.springboot.gft.customerse.facade.dto.Customer;
+
+@Service
+@Qualifier("service-feing")
+public class CustomersService implements ICustomersService{
+
+	@Autowired
+	private CustomersClientRest clientRest;
+	
+	
+	@Override
+	public List<Customer> listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity detalle(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer crear(Customer cliente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseEntity eliminar(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer editar(Customer customer, Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

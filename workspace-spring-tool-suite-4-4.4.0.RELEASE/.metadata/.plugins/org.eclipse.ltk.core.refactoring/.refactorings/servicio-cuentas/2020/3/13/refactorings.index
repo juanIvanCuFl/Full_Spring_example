@@ -1,0 +1,20 @@
+1585458611014	Rename type 'Cuenta'
+1585459815595	Delete element
+1585460001753	Rename type 'Accoun_pk'
+1585460379948	Move compilation unit
+1585460432321	Rename package 'com.springboot.gft.clientes.entity.dao'
+1585460527149	Rename type 'ICustomerService'
+1585460586758	Rename type 'CustomerService'
+1585461008765	Rename field 'clienteService'
+1585462958558	Rename package 'com.springboot.gft.clientes'
+1585462974626	Rename package 'com.springboot.gft.clientes.models.controller'
+1585462987353	Rename package 'com.springboot.gft.clientes.models.dao'
+1585463503466	Rename package 'com.springboot.gft.clientes.models.entity'
+1585463524435	Rename package 'com.springboot.gft.clientes.models.service'
+1585463845197	Rename type 'ServicioCuentasApplication'
+1585464468203	Copy compilation unit
+1585464474077	Delete element
+1585464483689	Copy compilation unit
+1585464504032	Rename type 'Account'
+1585465007322	Rename local variable 'account'
+1585493101262	Delete element

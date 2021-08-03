@@ -1,0 +1,74 @@
+package com.springboot.gft.accountse.facade.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.springboot.gft.accountse.facade.dto.DtoAccount;
+import com.springboot.gft.accountse.models.service.IAccountService;
+
+
+@RestController
+public class AccountseController {
+	
+	@Autowired
+	@Qualifier("serviceFeign")
+	private IAccountService accountService;
+
+	@GetMapping(value = "/")
+	public List<DtoAccount> listar(HttpServletRequest request){
+		return accountService.listar();
+	}
+	
+	
+	@PostMapping(value="/")
+	@ResponseStatus(HttpStatus.CREATED)
+	public DtoAccount crear(@RequestBody DtoAccount dtoAccount) {
+		DtoAccount resultAccount =  accountService.crear(dtoAccount);
+		return resultAccount;
+	}
+	
+	
+	
+	
+	@GetMapping(value = "/{accountNumber}/customers/{id_customer}")
+	public ResponseEntity detalle(HttpServletRequest request, @PathVariable("id_customer") Long id,
+			@PathVariable("accountNumber") String accountNumber) throws Exception{
+		
+		ResponseEntity account = accountService.detalle(id,accountNumber);
+
+		return account;
+	}
+	
+	
+	
+	@DeleteMapping(value = "/{accountNumber}/customers/{id_customer}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public ResponseEntity eliminar(@PathVariable("id_customer") Long id,
+			@PathVariable("accountNumber") String accountNumber){
+	
+		return accountService.eliminar(id, accountNumber);
+		
+	}
+	
+	@PutMapping(value = "/{accountNumber}/customers/{id_customer}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public DtoAccount editar(@RequestBody DtoAccount dtoAccount, @PathVariable("id_customer") Long id,
+			@PathVariable("accountNumber") String accountNumber) {
+		return accountService.editar(dtoAccount, id, accountNumber);
+	}
+	
+}

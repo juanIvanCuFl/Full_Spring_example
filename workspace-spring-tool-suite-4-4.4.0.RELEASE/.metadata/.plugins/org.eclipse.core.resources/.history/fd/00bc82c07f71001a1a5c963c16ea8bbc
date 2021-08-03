@@ -1,0 +1,5 @@
+package com.springboot.gft.clientes.entity.dao;
+
+public interface AccountDao {
+
+}

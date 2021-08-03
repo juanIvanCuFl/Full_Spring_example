@@ -1,0 +1,18 @@
+package com.springboot.gft.clientes.models.services;
+
+import java.util.List;
+
+import com.springboot.gft.clientes.models.entity.Customers;
+
+
+public interface IClienteService {
+
+	public List<Customers> findAll();
+	
+	public Customers findById(Long id);
+	
+	public Customers save(Customers cliente);
+	
+	public void deleteById(Long id);
+	
+}

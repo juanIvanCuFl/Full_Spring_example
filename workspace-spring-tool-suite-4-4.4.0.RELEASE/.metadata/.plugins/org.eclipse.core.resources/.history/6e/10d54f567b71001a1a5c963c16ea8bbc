@@ -1,0 +1,42 @@
+package com.springboot.gft.clientes.models.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.springboot.gft.clientes.models.dao.CustomerDao;
+import com.springboot.gft.clientes.models.entity.Customer;
+
+@Service
+public class ClienteService implements ICustomerService {
+
+	@Autowired
+	private CustomerDao clientesDao;
+	
+	@Override
+	@Transactional(readOnly = true)
+	public List<Customer> findAll() {
+		return (List<Customer>) clientesDao.findAll();
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Customer findById(Long id) {
+		return clientesDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Customer save(Customer cliente) {
+		return clientesDao.save(cliente);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(Long id) {
+		clientesDao.deleteById(id);
+	}
+
+}

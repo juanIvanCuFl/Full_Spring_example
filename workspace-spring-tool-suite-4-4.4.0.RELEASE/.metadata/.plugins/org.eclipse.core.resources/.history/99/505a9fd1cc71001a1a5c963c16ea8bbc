@@ -1,0 +1,5 @@
+package com.springboot.gft.accountse.clients;
+
+public class AccountClientRest {
+
+}

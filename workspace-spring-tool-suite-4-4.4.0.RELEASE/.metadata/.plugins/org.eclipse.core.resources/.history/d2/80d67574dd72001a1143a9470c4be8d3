@@ -1,0 +1,2 @@
+spring.application.name=servicio-customers
+spring.cloud.config.uri=http://config-server-gft:8888

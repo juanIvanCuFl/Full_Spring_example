@@ -1,0 +1,5 @@
+package com.springboot.gft.accountse.models.service;
+
+public class AccountService {
+
+}
